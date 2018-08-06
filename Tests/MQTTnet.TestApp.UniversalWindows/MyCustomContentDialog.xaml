@@ -1,0 +1,28 @@
+﻿<ContentDialog
+x:Class="ContentDialogDemo01.MyCustomContentDialog"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:local="using:ContentDialogDemo01"
+xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+mc:Ignorable="d"
+x:Name="dialog"
+Title="Delete">
+
+    <!-- Content body -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,20">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="200" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.ColumnSpan="3" Text="Delete file A?" Margin="5" SelectionChanged="TextBlock_SelectionChanged" />
+        <Button Grid.Row="1" Content="Jog" x:Name="btn1" Click="btn1_Click" Margin="5,0" Width="100" />
+        <Button Grid.Row="1" Grid.Column="1" Content="Sprint" x:Name="btn2" Click="btn2_Click" Margin="5,0" Width="100" />
+        <Button Grid.Row="1" Grid.Column="2" Content="Power Walk" x:Name="btn3" Click="btn3_Click" Margin="5,0" Width="100" />
+    </Grid>
+</ContentDialog>
